@@ -17,7 +17,7 @@ phases:
       - apt-get update -y
       - pip install -r requirements.txt
       # - command
-  pre_build:
+  #pre_build:
     #commands:
       
       # - command

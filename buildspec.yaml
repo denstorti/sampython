@@ -23,7 +23,8 @@ phases:
       # - command
   build:
     commands:
-      - python -m pytest .\tests\
+      - pwd
+      - python -m pytest .\sam-app\tests\
       # - command
   post_build:
     commands:

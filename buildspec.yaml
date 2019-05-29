@@ -23,7 +23,7 @@ phases:
       # - command
   build:
     commands:
-      - py -m pytest .\tests\
+      - python -m pytest .\tests\
       # - command
   post_build:
     commands:

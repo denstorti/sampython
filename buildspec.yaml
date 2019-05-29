@@ -11,7 +11,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      # name: version
+      python: 3.7
       # name: version
     commands:
       - apt-get update -y

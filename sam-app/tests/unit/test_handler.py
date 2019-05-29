@@ -4,6 +4,7 @@ import requests
 #sys.path.append('c:\\src\\sampython\\sam-app\\hello_world')
 sys.path.append('.')
 sys.path.append('..')
+sys.path.append('...')
 sys.path.append('.\\hello_world')  # ESSENTIAL TO IMPORT MESSAGE MODULE
 
 import pytest

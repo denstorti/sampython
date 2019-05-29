@@ -24,7 +24,7 @@ phases:
   build:
     commands:
       - pwd
-      - ll
+      - ls
       - python -m pytest ./sam-app/tests/
       # - command
   post_build:

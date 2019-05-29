@@ -15,11 +15,11 @@ phases:
       # name: version
     commands:
       - apt-get update -y
-      
+      - pip install -r requirements.txt
       # - command
   pre_build:
-    commands:
-      - pip install -r requirements.txt
+    #commands:
+      
       # - command
   build:
     commands:

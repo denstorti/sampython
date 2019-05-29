@@ -25,7 +25,7 @@ phases:
     commands:
       - ls
       - cd sam-app
-      - python -m pytest ./tests/
+      - python -m pytest ./hello_world/message.py ./tests/
       # - command
   post_build:
     commands:

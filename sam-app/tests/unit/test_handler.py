@@ -1,7 +1,7 @@
 import json
 import sys
-
-#sys.path.append('c:\\src\\sampython\\sam-app\\hello_world')
+import requests
+sys.path.append('c:\\src\\sampython\\sam-app\\hello_world')
 sys.path.append('.\\hello_world')  # ESSENTIAL TO IMPORT MESSAGE MODULE
 
 import pytest
@@ -78,7 +78,8 @@ def test_lambda_handler(apigw_event, mocker):
 
 def testMessage():
 
-    ret = message.returnMessage()
+    ip = requests.get("http://checkip.amazonaws.com/")
+    ret = message.returnMessage(ip)
     data = json.loads(ret["body"])
 
     assert ret["statusCode"] == 200

@@ -23,6 +23,7 @@ phases:
       # - command
   build:
     commands:
+      - `export PYTHONPATH=.` 
       - ls
       - cd sam-app
       - python -m pytest ./hello_world/message.py ./tests/

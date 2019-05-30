@@ -4,7 +4,8 @@ import requests
 
 import pytest
 
-from hello_world import message, app
+# needed to reference message as hello_world.message in app.py and add sys.path.append('.')
+from hello_world import message, app  
 
 
 @pytest.fixture()

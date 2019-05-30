@@ -2,7 +2,6 @@ print('__name__ = %s' % __name__)
 import sys
 sys.path.append('.')
 # print(sys.path)
-import json
 from hello_world.message import returnMessage
 import requests
 

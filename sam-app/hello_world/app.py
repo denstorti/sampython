@@ -1,8 +1,9 @@
-# print('__name__ = %s' % __name__)
-# import sys
+print('__name__ = %s' % __name__)
+import sys
+sys.path.append('.')
 # print(sys.path)
 import json
-from message import returnMessage
+from hello_world.message import returnMessage
 import requests
 
 def lambda_handler(event, context):

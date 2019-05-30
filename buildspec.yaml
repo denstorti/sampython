@@ -12,26 +12,28 @@ phases:
   install:
     runtime-versions:
       python: 3.7
-      # name: version
+
     commands:
+      - pip install --upgrade pip
       - apt-get update -y
       - pip install -r requirements.txt
-      # - command
+
   #pre_build:
     #commands:
-      
       # - command
   build:
     commands:
       - ls
       - cd sam-app
       - ls
-      - export PYTHONPATH=.
+      #- export PYTHONPATH=.
       - python -m pytest ./tests/ -v
-      # - command
+      
+      
   post_build:
     commands:
       - echo Build completed on `date`
+
 #artifacts:
   #files:
     # - location

@@ -1,8 +1,9 @@
-import sys
-import json
-from hello_world.message import returnMessage
+"""My test app"""
 
+import sys
 import requests
+from hello_world.message import return_message
+
 
 sys.path.append('.')
 # print(sys.path)
@@ -15,7 +16,8 @@ def lambda_handler(event, context):
     event: dict, required
         API Gateway Lambda Proxy Input Format
 
-        Event doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html#api-gateway-simple-proxy-for-lambda-input-format
+        Event doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/ \
+            set-up-lambda-proxy-integrations.html#api-gateway-simple-proxy-for-lambda-input-format
 
     context: object, required
         Lambda Context runtime methods and attributes
@@ -26,15 +28,16 @@ def lambda_handler(event, context):
     ------
     API Gateway Lambda Proxy Output Format: dict
 
-        Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
+        Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/ \
+            set-up-lambda-proxy-integrations.html
     """
 
     try:
-        ip = requests.get("http://checkip.amazonaws.com/")
+        ip_address = requests.get("http://checkip.amazonaws.com/")
     except requests.RequestException as e:
         # Send some context about this error to Lambda Logs
         print(e)
 
         raise e
 
-    return returnMessage(ip)
+    return return_message(ip_address)

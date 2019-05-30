@@ -78,7 +78,7 @@ def test_lambda_handler(apigw_event, mocker):
 def testMessage():
 
     ip = requests.get("http://checkip.amazonaws.com/")
-    ret = message.returnMessage(ip)
+    ret = message.return_message(ip)
     data = json.loads(ret["body"])
 
     assert ret["statusCode"] == 200

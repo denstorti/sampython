@@ -1,12 +1,15 @@
-import json
-import requests
+"""Return the pathname of the KOS root directory."""
 
-def returnMessage(ip):
-    print(type(ip))
+import json
+
+def return_message(ip_address):
+    """Return information and IP"""
+
+    print(type(ip_address))
     return {
         "statusCode": 200,
         "body": json.dumps({
             "message": "hello world",
-            "location": ip.text.replace("\n", "")
+            "location": ip_address.text.replace("\n", "")
         })
     }

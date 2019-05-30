@@ -29,9 +29,12 @@ phases:
       #- export PYTHONPATH=.
       - python -m pytest ./tests/ -v
       
-      
   post_build:
     commands:
+      - sam package \ 
+        --output-template-file packaged.yaml \
+        --s3-bucket my-denis-bucket
+
       - echo Build completed on `date`
 
 #artifacts:

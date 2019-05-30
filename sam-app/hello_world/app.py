@@ -1,9 +1,11 @@
-print('__name__ = %s' % __name__)
 import sys
+import json
+from hello_world.message import returnMessage
+
+import requests
+
 sys.path.append('.')
 # print(sys.path)
-from hello_world.message import returnMessage
-import requests
 
 def lambda_handler(event, context):
     """Sample pure Lambda function
